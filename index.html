@@ -13,6 +13,10 @@
     rel="stylesheet"
   />
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     :root {
       --button-light: #ffffff;
       --button-dark: #171717;
@@ -25,11 +29,11 @@
     }
   </style>
 </head>
-<body class="min-h-screen bg-[#F0F0F0] text-[#111111]">
+<body id="top" class="min-h-screen bg-[#F0F0F0] text-[#111111]">
   <header class="mx-auto w-full max-w-[1280px] px-4 pt-4 sm:px-6 sm:pt-5 lg:px-8">
     <nav class="flex items-center justify-between py-4 sm:py-5">
       <div class="flex items-center gap-5 lg:gap-11">
-        <a href="#" aria-label="Home" class="shrink-0">
+        <a href="#top" aria-label="Home" class="shrink-0">
           <img
             src="./photos/logo.svg"
             alt="Logo"
@@ -38,16 +42,16 @@
         </a>
 
         <div class="hidden items-center gap-6 md:flex lg:gap-11">
-          <a href="#" class="text-sm font-semibold tracking-[-0.02em] text-[color:var(--text-muted)] transition hover:text-black lg:text-[15px]">
+          <a href="#about-us" class="text-sm font-semibold tracking-[-0.02em] text-[color:var(--text-muted)] transition hover:text-black lg:text-[15px]">
             About us
           </a>
-          <a href="#" class="text-sm font-semibold tracking-[-0.02em] text-[color:var(--text-muted)] transition hover:text-black lg:text-[15px]">
+          <a href="#how-it-works" class="text-sm font-semibold tracking-[-0.02em] text-[color:var(--text-muted)] transition hover:text-black lg:text-[15px]">
             How it works
           </a>
-          <a href="#" class="text-sm font-semibold tracking-[-0.02em] text-[color:var(--text-muted)] transition hover:text-black lg:text-[15px]">
+          <a href="#pricing" class="text-sm font-semibold tracking-[-0.02em] text-[color:var(--text-muted)] transition hover:text-black lg:text-[15px]">
             Pricing
           </a>
-          <a href="#" class="text-sm font-semibold tracking-[-0.02em] text-[color:var(--text-muted)] transition hover:text-black lg:text-[15px]">
+          <a href="#faqs" class="text-sm font-semibold tracking-[-0.02em] text-[color:var(--text-muted)] transition hover:text-black lg:text-[15px]">
             FAQs
           </a>
         </div>
@@ -55,13 +59,13 @@
 
       <div class="hidden items-center gap-4 md:flex lg:gap-5">
         <a
-          href="#"
+          href="#contact"
           class="inline-flex min-w-[148px] items-center justify-center border border-black/6 bg-[color:var(--button-light)] px-8 py-5 text-lg font-semibold text-black transition hover:bg-[#f7f7f7]"
         >
           Login
         </a>
         <a
-          href="#"
+          href="#pricing"
           class="inline-flex min-w-[140px] items-center justify-center border border-[#111111] bg-[color:var(--button-dark)] px-8 py-5 text-lg font-semibold text-white transition hover:bg-[#2a2a2a]"
         >
           Sign Up
@@ -87,29 +91,29 @@
     <div id="mobileMenu" class="hidden pb-6 md:hidden">
       <div class="rounded-[28px] border border-black/8 bg-white p-4 shadow-[0_18px_45px_rgba(17,17,17,0.08)]">
         <div class="flex flex-col gap-1">
-          <a href="#" class="rounded-2xl px-4 py-3 text-base font-semibold text-black/70 transition hover:bg-black/4 hover:text-black">
+          <a href="#about-us" class="rounded-2xl px-4 py-3 text-base font-semibold text-black/70 transition hover:bg-black/4 hover:text-black">
             About us
           </a>
-          <a href="#" class="rounded-2xl px-4 py-3 text-base font-semibold text-black/70 transition hover:bg-black/4 hover:text-black">
+          <a href="#how-it-works" class="rounded-2xl px-4 py-3 text-base font-semibold text-black/70 transition hover:bg-black/4 hover:text-black">
             How it works
           </a>
-          <a href="#" class="rounded-2xl px-4 py-3 text-base font-semibold text-black/70 transition hover:bg-black/4 hover:text-black">
+          <a href="#pricing" class="rounded-2xl px-4 py-3 text-base font-semibold text-black/70 transition hover:bg-black/4 hover:text-black">
             Pricing
           </a>
-          <a href="#" class="rounded-2xl px-4 py-3 text-base font-semibold text-black/70 transition hover:bg-black/4 hover:text-black">
+          <a href="#faqs" class="rounded-2xl px-4 py-3 text-base font-semibold text-black/70 transition hover:bg-black/4 hover:text-black">
             FAQs
           </a>
         </div>
 
         <div class="mt-4 grid gap-3 sm:grid-cols-2">
           <a
-            href="#"
+            href="#contact"
             class="inline-flex items-center justify-center rounded-2xl border border-black/6 bg-[color:var(--button-light)] px-5 py-4 text-base font-semibold text-black transition hover:bg-[#f7f7f7]"
           >
             Login
           </a>
           <a
-            href="#"
+            href="#pricing"
             class="inline-flex items-center justify-center rounded-2xl border border-[#111111] bg-[color:var(--button-dark)] px-5 py-4 text-base font-semibold text-white transition hover:bg-[#2a2a2a]"
           >
             Sign Up
@@ -175,7 +179,7 @@
       </div>
     </section>
 
-    <section class="mx-auto max-w-[1280px] px-4 pb-[84px] sm:px-6 sm:pb-[104px] lg:px-8 lg:pb-[128px]">
+    <section id="about-us" class="mx-auto max-w-[1280px] px-4 pb-[84px] sm:px-6 sm:pb-[104px] lg:px-8 lg:pb-[128px]">
       <div class="grid items-center gap-12 lg:grid-cols-[minmax(340px,0.92fr)_minmax(0,1.08fr)] lg:gap-12">
         <div class="relative order-2 mx-auto w-full max-w-[520px] lg:order-1">
           <div class="absolute inset-x-8 top-12 h-[360px] rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.92),rgba(255,255,255,0.34)_58%,transparent_76%)] blur-2xl"></div>
@@ -229,7 +233,7 @@
       </div>
     </section>
 
-    <section class="mx-auto max-w-[1280px] px-4 pb-[96px] sm:px-6 sm:pb-[116px] lg:px-8 lg:pb-[140px]">
+    <section id="how-it-works" class="mx-auto max-w-[1280px] px-4 pb-[96px] sm:px-6 sm:pb-[116px] lg:px-8 lg:pb-[140px]">
       <div class="grid gap-14 lg:grid-cols-[minmax(0,0.96fr)_minmax(340px,0.84fr)] lg:items-start lg:gap-12">
         <div>
           <div class="inline-flex border border-black/8 bg-white px-6 py-3 text-sm font-extrabold uppercase tracking-[-0.02em] text-[#111111] shadow-[0_12px_28px_rgba(17,17,17,0.04)]">
@@ -335,7 +339,7 @@
       </div>
     </section>
 
-    <section class="mx-auto max-w-[1280px] px-4 pb-[110px] sm:px-6 sm:pb-[128px] lg:px-8 lg:pb-[156px]">
+    <section id="pricing" class="mx-auto max-w-[1280px] px-4 pb-[110px] sm:px-6 sm:pb-[128px] lg:px-8 lg:pb-[156px]">
       <div class="grid items-center gap-12 lg:grid-cols-[minmax(320px,0.86fr)_minmax(0,1.14fr)] lg:gap-10">
         <div class="relative mx-auto w-full max-w-[560px]">
           <div class="absolute inset-x-8 top-8 h-[360px] rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.98),rgba(255,255,255,0.34)_58%,transparent_76%)] blur-2xl"></div>
@@ -395,7 +399,7 @@
           </ul>
 
           <a
-            href="#"
+            href="#subscribe"
             class="mt-auto inline-flex min-h-14 items-center justify-center bg-[#171717] px-8 text-[22px] font-medium text-white transition hover:bg-[#2a2a2a]"
           >
             Join
@@ -439,7 +443,7 @@
           </ul>
 
           <a
-            href="#"
+            href="#subscribe"
             class="mt-auto inline-flex min-h-14 items-center justify-center bg-white px-8 text-[22px] font-medium text-[#171717] transition hover:bg-[#f2f2f2]"
           >
             Join
@@ -483,7 +487,7 @@
           </ul>
 
           <a
-            href="#"
+            href="#subscribe"
             class="mt-auto inline-flex min-h-14 items-center justify-center bg-[#171717] px-8 text-[22px] font-medium text-white transition hover:bg-[#2a2a2a]"
           >
             Join
@@ -492,7 +496,7 @@
       </div>
     </section>
 
-    <section class="mx-auto max-w-[1280px] px-4 pb-[116px] sm:px-6 sm:pb-[136px] lg:px-8 lg:pb-[168px]">
+    <section id="faqs" class="mx-auto max-w-[1280px] px-4 pb-[116px] sm:px-6 sm:pb-[136px] lg:px-8 lg:pb-[168px]">
       <div class="grid gap-14 lg:grid-cols-[minmax(0,1.02fr)_minmax(320px,0.78fr)] lg:items-start lg:gap-12">
         <div>
           <div class="inline-flex border border-black/8 bg-white px-6 py-3 text-sm font-extrabold uppercase tracking-[-0.02em] text-[#111111] shadow-[0_12px_28px_rgba(17,17,17,0.04)]">
@@ -631,6 +635,87 @@
     </section>
   </main>
 
+  <footer class="bg-[#171717] text-white">
+    <div class="mx-auto max-w-[1280px] px-4 py-14 sm:px-6 sm:py-18 lg:px-8 lg:py-20">
+      <div class="grid gap-14 lg:grid-cols-[minmax(320px,1.2fr)_220px_160px_280px] lg:gap-10">
+        <div>
+          <a href="#top" aria-label="Home" class="inline-flex">
+            <img src="./photos/6. Logotype/LogoWhite.svg" alt="Logo" class="h-[52px] w-[52px]" />
+          </a>
+
+          <div class="mt-10 flex flex-wrap items-center gap-4 sm:gap-5">
+            <a href="#" aria-label="Facebook" class="transition hover:opacity-75">
+              <img src="./photos/social_fb.svg" alt="" class="h-[46px] w-[46px]" />
+            </a>
+            <a href="#" aria-label="Twitter" class="transition hover:opacity-75">
+              <img src="./photos/social_tw.svg" alt="" class="h-[46px] w-[46px]" />
+            </a>
+            <a href="#" aria-label="Google Plus" class="transition hover:opacity-75">
+              <img src="./photos/social_gl.svg" alt="" class="h-[46px] w-[46px]" />
+            </a>
+            <a href="#" aria-label="LinkedIn" class="transition hover:opacity-75">
+              <img src="./photos/social_in.svg" alt="" class="h-[46px] w-[46px]" />
+            </a>
+            <a href="#" aria-label="YouTube" class="transition hover:opacity-75">
+              <img src="./photos/social_yt.svg" alt="" class="h-[46px] w-[46px]" />
+            </a>
+          </div>
+
+          <div id="subscribe" class="mt-12 max-w-[460px]">
+            <h3 class="max-w-[360px] text-[30px] font-extrabold leading-[1.15] tracking-[-0.04em] text-white sm:text-[38px]">
+              Want to recieve our awesome stories?
+            </h3>
+
+            <form class="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-0">
+              <label for="footer-email" class="sr-only">Enter your email</label>
+              <input
+                id="footer-email"
+                type="email"
+                placeholder="Enter your email"
+                class="min-h-16 w-full border border-white/16 bg-transparent px-5 text-lg text-white outline-none placeholder:text-white/58 focus:border-white/32"
+              />
+              <button
+                type="submit"
+                class="inline-flex min-h-16 items-center justify-center bg-white px-8 text-lg font-medium text-[#171717] transition hover:bg-[#f1f1f1] sm:min-w-[176px]"
+              >
+                Subcribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div id="contact">
+          <p class="text-[20px] font-extrabold tracking-[-0.03em] text-white">Email</p>
+          <a
+            href="mailto:info@the18.design"
+            class="mt-5 inline-block text-[24px] leading-tight tracking-[-0.03em] text-white/92 transition hover:text-white"
+          >
+            info@the18.design
+          </a>
+        </div>
+
+        <nav class="flex flex-col gap-4 text-[22px] leading-tight tracking-[-0.03em] text-white/92">
+          <a href="#about-us" class="transition hover:text-white">About us</a>
+          <a href="#how-it-works" class="transition hover:text-white">How it works</a>
+          <a href="#pricing" class="transition hover:text-white">Pricing</a>
+          <a href="#faqs" class="transition hover:text-white">FAQs</a>
+        </nav>
+
+        <nav class="flex flex-col gap-4 text-[22px] leading-tight tracking-[-0.03em] text-white/92">
+          <a href="#pricing" class="transition hover:text-white">Lead generation</a>
+          <a href="#how-it-works" class="transition hover:text-white">Customer engagement</a>
+          <a href="#faqs" class="transition hover:text-white">Customer support</a>
+          <a href="#faqs" class="transition hover:text-white">Help Center Articles</a>
+          <a href="#contact" class="transition hover:text-white">Outbound Messages</a>
+        </nav>
+      </div>
+
+      <div class="mt-14 border-t border-white/8 pt-8 text-[20px] tracking-[-0.03em] text-white/88 sm:mt-16">
+        &copy; I8 Design, all rights reserved.
+      </div>
+    </div>
+  </footer>
+
   <script>
     const menuButton = document.getElementById("menuButton");
     const mobileMenu = document.getElementById("mobileMenu");
@@ -646,6 +731,13 @@
         mobileMenu.classList.add("hidden");
         menuButton.setAttribute("aria-expanded", "false");
       }
+    });
+
+    mobileMenu.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        menuButton.setAttribute("aria-expanded", "false");
+      });
     });
 
     const faqItems = document.querySelectorAll("[data-faq-item]");
